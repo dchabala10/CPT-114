@@ -1,0 +1,54 @@
+<script type="text/javascript">
+<!--
+var numWidgets, delivery, discountRate, delRate, subtotal;
+var discount, deliverFee, totalFee;
+
+//Assumptions
+var smallDiscount = 0.10;
+var medDiscount= 0.2;
+var bigDiscount = 0.3;
+var deliveryRate = 1.00;
+var widgetPrice = 10.00;
+var smallCutoff = 10;
+var midCutoff = 50;
+var largeCutoff = 100;
+var discountRate = 0; //Remember to put this in your if statement in the PS, HA, Meta
+var delRate = 0; //Remember to put this in your if statement in the PS, HA, Meta
+
+//Input
+numWidgets = prompt("How many are you buying", " ");
+delivery = prompt("Do you want delivery? (yes/no)", "yes");
+
+//Calculations
+if (numWidgets > largeCutoff)	//Always remove the largest population first
+{	
+	discountRate = bigDiscount;
+	}
+else if (numWidgets > midCutoff)
+{
+	discountRate = medDiscount;
+}
+else if (numWidgets > smallCutoff)
+{	
+	discountRate = smallDiscount;
+}
+
+
+if (delivery == "yes") //double equals sign!!!!!!!!!!!!!!!!!!!!!!
+{	
+	delRate = deliveryRate;
+	}
+
+subtotal = numWidgets * widgetPrice;
+discount = subtotal * discountRate;
+deliverFee = numWidgets * delRate;
+totalFee = subtotal - discount + deliverFee;
+
+//Output
+document.write("The number widgets ordered: " +numWidgets);
+document.write("<br>Your subtotal is: " +subtotal);
+document.write("<br>Your discount is: " +discount);
+document.write("<br>Your delivery fee is: " +deliverFee);
+document.write("<br>Your total fee is: " +totalFee);
+// -->
+</script>
