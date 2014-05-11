@@ -1,0 +1,25 @@
+<script type="text/javascript">
+<!--
+//Assumptions
+var numberOfShifts, shift1, shift2, shift3;
+var totalNumber, averageNumber;
+numberOfShifts = 3;
+
+//Input
+shift1 = prompt("What is the 1st shift total?");
+shift2 = prompt("What is the 2nd shift total?");
+shift3 = prompt("What is the 3rd shift total?");
+
+shift1 = parseInt(shift1);
+shift2 = parseInt(shift2);
+shift3 = parseInt(shift3);
+
+//Calculations
+totalNumber = shift1 + shift2 + shift3;
+averageNumber = totalNumber/numberOfShifts;
+
+//Output
+document.write("The total number of widgets produced is " +totalNumber);
+document.write("<br>The average number of widgets produced is " +averageNumber);
+// -->
+</script>
