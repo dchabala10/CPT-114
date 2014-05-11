@@ -1,0 +1,73 @@
+<script type="text/javascript">
+<!--
+//assignments
+var numTickets, ticketType; //NaN means null, need number somewhere
+var avgPerCustomer, totalMoney;
+var adultRate = 8;
+var childRate = 4;
+var seniorRate = 6;
+var militaryRate = 7;
+var adultAccum = 0;
+var childAccum = 0;
+var seniorAccum = 0;
+var militaryAccum = 0;
+var customerCount = 0;
+var adultMoney = 0;
+var childMoney = 0;
+var seniorMoney = 0; 
+var militaryMoney = 0; 
+var anotherCustomer = "yes";
+
+//loop
+while (anotherCustomer == "yes")
+{
+ customerCount = customerCount + 1;
+ numTickets = prompt("How many tickets?", "10");
+ numTickets = parseInt(numTickets);
+ ticketType = prompt("What type of ticket? child/adult/senior/military", "military");
+ 
+ switch(ticketType)
+ {
+ case "adult":
+			adultAccum = adultAccum + numTickets;
+			adultMoney = adultAccum * adultRate;
+			//alert("The amount for adult tickets is: $" +adultMoney);
+		break;
+
+	case "child":
+			 childAccum = childAccum + numTickets;
+			 childMoney = childAccum * childRate;
+			 //alert("The amount for child tickets is: $" +childMoney);
+		break;
+	
+	case "senior":
+			 seniorAccum = seniorAccum + numTickets;
+			 seniorMoney = seniorAccum * seniorRate;
+			 //alert("The amount for senior tickets is: $" +seniorMoney);
+		break;
+			
+	case "military":
+			 militaryAccum = militaryAccum + numTickets
+			 militaryMoney = militaryAccum * militaryRate
+			 //alert("The amount for military tickets is: $" +militaryMoney);
+		break;
+		
+		default: 
+				alert("You typed " +ticketType+ " incorrectly. You should have typed adult, child, senior, or military");
+		break;
+	}//end switch
+	
+anotherCustomer = prompt("Do you have another customer?", "yes");
+}//end loop
+totalMoney = adultMoney + childMoney + seniorMoney + militaryMoney;
+avgPerCustomer = totalMoney / customerCount;
+avgPerCustomer = avgPerCustomer.toFixed(2); //two decimal places!
+document.write("The amount for adult tickets is: $" +adultMoney);
+document.write("<br>The amount for child tickets is: $" +childMoney);
+document.write("<br>The amount for senior tickets is: $" +seniorMoney);
+document.write("<br>The amount for military tickets is: $" +militaryMoney);
+document.write("<br>Total Money: $" +totalMoney);
+document.write("<br>Average per customer: $" +avgPerCustomer);
+
+// -->
+</script>
