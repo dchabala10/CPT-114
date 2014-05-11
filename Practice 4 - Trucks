@@ -1,0 +1,45 @@
+<script type="text/javascript">
+<!--
+var numbDays, stopOde, startOde, typeTruck;
+var numbMiles, truckRate, mRate, dailyCharges;
+var mileageCharge, totalBill;
+
+//Assignments
+var regTruckRate = 20;
+var largeTruckRate = 35;
+var mileageCutoff = 60;
+var milesRate = 1;
+
+//Input
+numbDays = prompt("How many days?", " "); //" " removes undefined
+stopOde = prompt("Stop mile reading?", " ");
+startOde = prompt(" Start mile reading?", " ");
+typeTruck = prompt("Truck type? large/regular", "large");
+
+//Calculations
+numbMiles = stopOde - startOde //Order is very important
+if (typeTruck == "large"){ //= means assign to, == means equals
+	truckRate = largeTruckRate;
+	}
+else{
+	truckRate = regTruckRate;
+}
+if (numbMiles > mileageCutoff) {
+	mRate = milesRate;
+	}
+else{
+	mRate = 0; //No numbers in caluclations unless nothing happens (0)
+}
+dailyCharges = numbDays * truckRate;
+mileageCharge = numbMiles * mRate;
+totalBill = dailyCharges + mileageCharge;
+
+//Output
+document.write("Number of days " +numbDays);
+document.write("<br>The number of miles is " +numbMiles);
+document.write("<br>The daily charge is $" +dailyCharges);
+document.write("<br>The mileage charge $" +mileageCharge);
+document.write("<br>Total Bill $ " +totalBill);
+
+// -->
+</script>
