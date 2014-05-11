@@ -1,0 +1,16 @@
+<script type="text/javascript">
+<!--
+var feet,inches, numberInchesInFeet;
+var totalInchesInFeet,total;
+//Assigning values here
+inches = 6;
+feet = 8;
+numberInchesInFeet = 12;
+//calculations
+totalInchesInFeet = numberInchesInFeet * feet; //12*8=96
+//final calculation
+total = totalInchesInFeet + inches; //96+6=102
+//output the answer
+document.write(total);
+// -->
+</script>
