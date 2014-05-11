@@ -1,0 +1,56 @@
+<script type="text/javascript">
+<!--
+var childName, gender;
+
+//Assignments
+var moreNames = "yes";
+var boyNameCount = 0;
+var boyNameAccum = ""; //text equivalent of 0, text string
+var girlNameCount = 0;
+var girlNameAccum = "";
+
+//loop
+while (moreNames == "yes")
+{
+   childName = prompt("What is the child's name?", " ");
+   gender = prompt("boy or girl name?", "boy");
+   if (gender == "boy")
+   {
+	    boyNameCount = boyNameCount + 1;
+			if (boyNameCount == 1)
+			{
+			   boyNameAccum = "Boys Names: <br>1. " + childName;
+			}
+			else
+			{
+				 boyNameAccum = boyNameAccum + "<br>" + boyNameCount + ".  " + childName;
+			}
+		alert(boyNameAccum);	
+		}
+		else
+		 {
+	    girlNameCount = girlNameCount + 1;
+			if (girlNameCount == 1)
+			{
+			   girlNameAccum = "<p>Girls Names: <br>1. " + childName;
+			}
+			else
+			{
+				 girlNameAccum = girlNameAccum + "<br>" + girlNameCount + ".  " + childName;
+			}
+		
+		alert(girlNameAccum);
+		}
+
+   moreNames = prompt("Are there any more names? yes/no", "yes");
+	 
+}//end of loop
+alert("done looping");
+
+document.write(boyNameAccum);
+document.write(girlNameAccum);
+
+
+
+// -->
+</script>
