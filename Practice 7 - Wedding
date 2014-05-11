@@ -1,0 +1,107 @@
+<script type="text/javascript">
+<!--
+//Assignments
+var guestName, weddingSide, giftType;
+var groomCount = 0;
+var groomAccum = "";
+var brideCount = 0;
+var brideAccum = "";
+var toasterCount = 0;
+var toasterAccum = "";
+var stemwareCount = 0;
+var stemwareAccum = "";
+var silverwareCount = 0;
+var silverwareAccum = "";
+var weddingGuest = "yes";
+
+//loop
+while (weddingGuest == "yes")
+{
+ guestName = prompt("What is your name?", " ");
+ weddingSide = prompt("Are you on the groom or bride side? groom/bride", " ");
+ giftType = prompt("What gift did you bring?", " ");
+
+ if (weddingSide == "groom")
+ {
+ 		groomCount = groomCount + 1;
+		if (groomCount == 1)
+		{
+		groomAccum = "Groom side: <br>"  +groomCount + ".  " + guestName + ":  " + giftType;
+		}
+		else
+		{
+		groomAccum = groomAccum  + ";  <br>"  + groomCount + ".  " + guestName + ":  " + giftType;
+		}
+		alert(groomAccum);
+	}//end groom if
+	else
+	{
+	brideCount = brideCount + 1;
+		if (brideCount == 1)
+		{
+		brideAccum = "<p>Bride side: <br>"  +brideCount + ".  " + guestName + ":  " + giftType;
+		}
+		else
+		{
+		brideAccum = brideAccum  + ";  <br>"  + brideCount + ".  " + guestName + ":  " + giftType;
+		}
+		alert(brideAccum);
+	}//end bride 
+switch (giftType) //switch
+{
+		case "toaster":
+ 		toasterCount = toasterCount + 1;
+		if (toasterCount == 1)
+		{
+		toasterAccum = "<p>Multiple toasters: <br>" +toasterCount + ".  " + guestName;
+		}
+     else
+		 {
+     toasterAccum = toasterAccum + ";  <br>" +toasterCount + ".  " + guestName;
+			}
+		alert(toasterAccum);
+		break;
+		
+		case "stemware":
+ 		stemwareCount = stemwareCount + 1;
+		if (stemwareCount == 1)
+		{
+		stemwareAccum = "<p>Multiple stemware: <br>" +stemwareCount + ".  " + guestName;
+		}
+     else
+		 {
+     stemwareAccum = stemwareAccum + ";  <br>" +stemwareCount + ".  " + guestName;
+			}
+		alert(stemwareAccum);
+		break;
+		
+		case "silverware":
+ 		silverwareCount = silverwareCount + 1;
+		if (silverwareCount == 1)
+		{
+		silverwareAccum = "<p>Multiple silverware: <br>" +silverwareCount + ".  " + guestName;
+		}
+     else
+		 {
+     silverwareAccum = silverwareAccum + ";  <br>" +silverwareCount + ".  " + guestName;
+			}
+		alert(silverwareAccum);
+		break;
+		
+		default:
+			 		alert("You typed " +giftType + ". You should have typed toaster/stemware/silverware");
+ 						break;
+}//end switch
+
+weddingGuest = prompt("Is there another wedding guest? yes/no", "yes");
+}//end loop
+alert("Done Looping");
+
+//Output
+document.write(groomAccum);
+document.write(brideAccum);
+document.write(toasterAccum);
+document.write(stemwareAccum);
+document.write(silverwareAccum);
+// -->
+</script>
