@@ -1,0 +1,88 @@
+<script type="text/javascript">
+<!--
+var totalCost, baseAmount, ramCost, hdCost, amountOfRam, ramRate;
+var computerType, hdType;
+
+//Assignments
+var errorFlag = 0;
+var laptop = 500;
+var laptopram = 100;
+var laptop300 = 150;
+var laptop500 = 200;
+var desktop = 300;
+var desktopram = 75;
+var desktop300 = 100;
+var desktop500 = 150;
+var netbook = 200;
+var netbookram = 150;
+var netbook300 = 200;
+var netbook500 = 250;
+
+//Input
+computerType = prompt("Are you buying a netbook, laptop, or desktop?", "laptop");
+hdType = prompt("GB only:  type 300 or 500", "300");
+
+//Calculations
+switch (computerType)
+{
+ case "laptop": 
+	baseAmount = laptop;
+	ramRate = laptopram;
+	if (hdType == "300") 
+	{
+		hdCost = laptop300;
+		}
+	else 
+	{
+		hdCost = laptop500;
+		}
+		break;
+case "desktop": 
+	baseAmount = desktop;
+	ramRate = desktopram;
+	if (hdType == "300")
+	{
+		hdCost = desktop300;
+		}
+	else 
+	{
+		hdCost = desktop500;
+		}
+		break;
+case "netbook": 
+	baseAmount = netbook;
+	ramRate = netbookram;
+	if (hdType == "300") 
+	{
+		hdCost = netbook300;
+		}
+	else 
+	{
+		hdCost = netbook500;
+		}
+		break;
+	default:
+	alert("You typed " +computerType + ". You should have typed laptop, desktop, or netbook");
+	errorFlag = 1;
+	break;
+}//close switch
+if (errorFlag == 0)
+{
+amountOfRam = prompt("How many GB of ram?", "10");
+ramCost = amountOfRam * ramRate;
+totalCost = baseAmount + ramCost + hdCost;
+
+//Output
+document.write("Computer type " +computerType);
+document.write("<br>The base amount is " + baseAmount);
+document.write("<br>The ram cost is " +ramCost);
+document.write("<br>The hard drive cost is " +hdCost);
+document.write("<br>The price is  is " +totalCost);
+}//closes error flag decision
+else
+{
+document.write("You typed " +computerType + ". You should have typed laptop, desktop, or netbook");
+}
+
+// -->
+</script>
