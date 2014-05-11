@@ -1,0 +1,68 @@
+<script type="text/javascript">
+<!--
+var foodType, numFood, totalMoney;
+
+//Assignments
+var hamburgerCost = 4;
+var hotdogCost = 2;
+var corndogCost = 3;
+var nachosCost = 5;
+var customerCount = 0;
+var hamburgerAccum = 0;
+var hamburgerMoney = 0;
+var hotdogAccum = 0;
+var hotdogMoney = 0;
+var corndogAccum = 0;
+var corndogMoney = 0;
+var nachosAccum = 0;
+var nachosMoney = 0;
+var anotherCustomer = "yes";
+
+//loop
+while (anotherCustomer == "yes")
+{
+ customerCount = customerCount + 1;
+ foodType = prompt("What type of food? hamburger, hotdog, corndog, nachos", " ");
+ numFood = prompt("How much are you buying?", " ");
+ numFood = parseInt(numFood);
+ 
+ switch(foodType)
+ {
+ case "hamburger":
+ 			hamburgerAccum = hamburgerAccum + numFood;
+			hamburgerMoney = hamburgerAccum * hamburgerCost;
+			break;
+			
+	case "hotdog":
+			hotdogAccum = hotdogAccum + numFood;
+			hotdogMoney = hotdogAccum * hotdogCost;
+			break;
+			
+	case "corndog":
+			corndogAccum = corndogAccum + numFood;
+			corndogMoney = corndogAccum * corndogCost;
+			break;
+			
+	case "nachos":
+			nachosAccum = nachosAccum + numFood;
+			nachosMoney = nachosAccum * nachosCost;
+			break;	 
+
+			default: 
+				alert("You typed " +foodType+ " incorrectly. Please type hamburger, hotdog, corndog, or nachos.");
+ }//end switch
+anotherCustomer = prompt("Do you have another customer?", "yes");
+}//end loop
+
+totalMoney = hamburgerMoney + hotdogMoney + corndogMoney + nachosMoney;
+document.write("Number of hamburgers: " +hamburgerAccum);
+document.write("<br>Number of hotdogs: " +hotdogAccum);
+document.write("<br>Number of corndogs: " +corndogAccum);
+document.write("<br>Number of nachos: " +nachosAccum);
+document.write("<br>The amount for hamburgers is: $" +hamburgerMoney);
+document.write("<br>The amount for hotdogs is: $" +hotdogMoney);
+document.write("<br>The amount for corndogs is: $" +corndogMoney);
+document.write("<br>The amount for nachos is: $" +nachosMoney);
+document.write("<br>The total amount is: $" +totalMoney);
+// -->
+</script>
