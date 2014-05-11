@@ -1,0 +1,28 @@
+<script type="text/javascript">
+<!--
+var moreStuff, stuff, avgStuff, numCustomers;
+var counter = 0; //to remove null
+var stuffAccum = 0; //to remove undefined
+numCustomers = prompt("How many customers?", " ");
+
+
+//start loop
+while (counter < numCustomers)
+{
+ 			counter = counter + 1; //or counter++ =
+			stuff = prompt("How much stuff?", " ");
+			//conversion
+			stuff = parseInt(stuff);
+			stuffAccum = stuffAccum + stuff; //need parseint to add
+			avgStuff = stuffAccum / counter;
+			alert("The total number of customers is " +counter); commented out for coder
+			//alert("The total number of stuff " +stuffAccum);
+			//alert("The average stuff per customer is " +avgStuff);
+ 			//moreStuff = prompt("More stuff? yes/no", "yes");
+}//stop loop
+alert("Done Looping");
+document.write("The total number of customers is " +counter);
+document.write("<br>The total number of stuff " +stuffAccum);
+document.write("<br>The average stuff per customer is " +avgStuff);
+// -->
+</script>
