@@ -1,0 +1,72 @@
+<script type="text/javascript">
+<!--
+//Assignments
+var homeLocation, homeValue, homeLocation, taxValue;
+var propertyTax;
+
+//Input
+homeLocation = prompt("Where do you live? (Charleston, Dorchester, Berkeley)", " ");
+homeValue = prompt("What is the value of your home?", " ");
+
+//Calculations
+switch (homeLocation)
+{
+case "Charleston":  
+	homeValue > 150000;
+	taxValue = homeValue * 0.02;
+	break;
+	
+case "Charleston": 
+	50000 < homeValue <= 150000;
+	taxValue = homeValue * 0.015;
+	break;
+	
+case "Charleston": 
+	homeValue <= 50000;
+	taxValue = homeValue * 0.01;
+	break;
+
+case "Dorchester": 
+	homeValue > 150000;
+	taxValue = homeValue * 0.0175;
+	break;
+	
+case "Dorchester":
+	50000 < homeValue <= 150000;
+	taxValue = homeValue * 0.015;
+	break;
+
+case "Dorchester": 
+	homeValue <= 50000;
+	taxValue = homeValue * 0.0125;
+	break;
+
+case "Berkeley": 
+	homeValue > 150000;
+	taxValue = homeValue * 0.0275;
+	break;
+	
+case "Berkeley": 
+	50000 < homeValue <= 150000;
+	taxValue = homeValue * 0.0225;
+	break;
+
+case "Berkeley": 
+	homeValue <= 50000;
+	taxValue = homeValue * 0.02;
+	break;
+	
+default: 
+alert("No matching county. Please check spelling");
+taxValue = 0;
+
+}//End switch
+propertyTax = taxValue;
+
+//Output
+document.write("The country you live in is: " +homeLocation);
+document.write("<br>Your home value is: $" +homeValue);
+document.write("<br>The property tax you owe is: $" +propertyTax);
+
+// -->
+</script>
