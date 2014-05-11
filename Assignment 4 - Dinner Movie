@@ -1,0 +1,49 @@
+<script type="text/javascript">
+<!--
+
+var normalTicketRate, earlyBirdTicketRate, weekdayDinnerRate;
+var weekendDinnerRate, numberOfTickets, earlyBirdTicket;
+var weekdayTicket, pricePerDinner, pricePerTicket;
+var combinedCostDinnerTicket, totalAmount;
+
+//Assumptions
+normalTicketRate = 10;
+earlyBirdTicketRate = 5;
+weekdayDinnerRate = 8;
+weekendDinnerRate = 12;
+
+//Input
+numberOfTickets = prompt("How many tickets are you purchasing?", " ");
+earlyBirdTicket = prompt("Are you purchasing an Early Bird ticket? (yes/no)", " ");
+weekdayTicket = prompt("Are you purchasing a Weekday ticket? (yes/no)", " ");
+
+//Calculations
+if (weekdayTicket == "yes")
+{
+	 pricePerDinner = weekdayDinnerRate;
+}
+ else
+ {
+		pricePerDinner = weekendDinnerRate;
+}
+if (earlyBirdTicket == "yes")
+{
+	 pricePerTicket = earlyBirdTicketRate;
+}
+ else
+ {
+ 			pricePerTicket = normalTicketRate;
+}
+combinedCostDinnerTicket = pricePerDinner + pricePerTicket;
+totalAmount = numberOfTickets * combinedCostDinnerTicket
+
+//Output
+document.write("The number of tickets purchased: " +numberOfTickets);
+document.write("<br>The price per ticket: $" +pricePerTicket);
+document.write("<br>The price per dinner: $" +pricePerDinner);
+document.write("<br>The combined cost of dinner(s) and ticket(s): $" +combinedCostDinnerTicket);
+document.write("<br>Total Amount Owed: $" +totalAmount);
+document.write("<br>Enjoy the show!");
+
+// -->
+</script>
