@@ -1,0 +1,53 @@
+<script type="text/javascript">
+<!--
+//Assumptions
+var costOfWatermelons, costOfCantaloupes, costOfHoneydew, numberOfWatermelons;
+var numberOfCantaloupes, numberOfHoneydew, totalNumberPurchased;
+var subtotalAmount1, subtotalAmount2, subtotalAmount3, subtotalAmount;
+var discount, orderTotal;
+
+
+costOfWatermelons = 5;
+costOfCantaloupes = 8;
+costOfHoneydew = 10;
+
+//Input
+numberOfWatermelons = prompt("How many watermelons are you purchasing?");
+numberOfCantaloupes = prompt("How many cantaloupes are you purchasing?");
+numberOfHoneydew = prompt("How many honeydew melons are you purchasing?");
+
+numberOfWatermelons =  parseInt(numberOfWatermelons);
+numberOfCantaloupes = parseInt(numberOfCantaloupes);
+numberOfHoneydew = parseInt(numberOfHoneydew);
+
+//Calculations
+totalNumberPurchased = numberOfWatermelons + numberOfCantaloupes + numberOfHoneydew;
+subtotalAmount1 = costOfWatermelons * numberOfWatermelons;
+subtotalAmount2 = costOfCantaloupes * numberOfCantaloupes;
+subtotalAmount3 = costOfHoneydew * numberOfHoneydew;
+subtotalAmount = subtotalAmount1 + subtotalAmount2 + subtotalAmount3;
+
+if (totalNumberPurchased > 10){
+	 discount = subtotalAmount * 0.10;
+	 
+}
+ else {
+			 discount = 0;
+			 
+	}		 
+
+orderTotal = subtotalAmount - discount;
+
+//Output
+document.write("Your total number of watermelons purchased is " +numberOfWatermelons);
+document.write("<br>Your total number of cantaloupes purchased is " +numberOfCantaloupes);
+document.write("<br>Your total number of honeydew melons purchased is " +numberOfHoneydew);
+document.write("<br>Your total number of melons purchased is " +totalNumberPurchased);
+document.write("<br>Your subtotal amount is $" +subtotalAmount);
+
+
+document.write("<br>Your discount is $" +discount);
+document.write("<br>Your order total is $" + orderTotal);
+document.write("<br>Thank you for shopping! Have a great day!");
+// -->
+</script>
