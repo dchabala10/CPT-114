@@ -1,0 +1,50 @@
+<script type="text/javascript">
+<!--
+var originalAmount, employee, discount, contractor, over90;
+var discountTotal, subtotal, tax, grandTotal;
+
+//Assignments
+var salesTax = 0.06;
+var employeeDisc = 0.05;
+var over500Disc = 0.10;
+var contractDisc = 0.25;
+
+
+//Input
+originalAmount = prompt("What is the amount of lumber you are buying?", " ");
+employee = prompt("Are you an employee? (yes/no)", " ");
+contractor = prompt("Are you a contractor? (yes/no)", " ");
+over90 = prompt("Are you over 90 years of age? (yes/no)", "no");
+
+//Calculations
+
+if (contractor == "yes")
+{
+	discount = contractDisc;
+}
+else if (originalAmount > 500)
+{ 
+	discount = over500Disc;
+}	
+else if (employee == "yes") 
+{
+	discount = employeeDisc;
+}
+if (over90 == "yes")
+{
+	salesTax = 0;
+}
+
+discountTotal = originalAmount * discount;		
+subtotal = originalAmount - discountTotal;
+tax = subtotal * salesTax;
+grandTotal = subtotal + tax;
+
+//Output
+document.write("Your original amount is: $" +originalAmount);
+document.write("<br>Your discount total is: $" +discountTotal);
+document.write("<br>Your subtotal is: $" +subtotal);
+document.write("<br>Your sales tax total is: $" +tax);
+document.write("<br>Your grand total is: $" +grandTotal);
+// -->
+</script>
