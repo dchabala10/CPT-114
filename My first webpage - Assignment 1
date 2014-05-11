@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Dan's First Page</title>
+</head>
+<body bgcolor = "green">
+<H1 align = "center">Dan's Web Page!!!</H1>
+<h2 align = "right">January 2014</h2>
+<h2>January 2014</h2>
+Assignment: <br>
+Numero Uno
+<hr size = 100 color = "silver">
+<p align = "center"><img src = "Dan and Melody.jpg">
+<h5 align = "center">Me and my girlfriend at a Detroit Tigers game</h5>
+<p>
+<h3 align = "center">About Me</h3>
+<p>
+<p>I am from Michigan and I lived in a town near Detroit. I graduated from MSU in 2012 with a
+degree in Linguistics and a minor in Spanish. Why am I 
+in South Carolina now? Well my girlfriend got a teaching job down here
+and I had nothing keeping me in Michigan. The weather is much nicer here, but I do
+miss the cold temperatures and snow occasionally. I am taking this class to 
+prepare me for graduate school. I applied to the computational linguistics
+program at Brandeis University in Boston and I hope to do research in the Speech
+Recognition field. I am very excited for this class!</p>
+<br>
+<h4 align = "center">Some Interests</h4>
+<OL> Favorite Movie/TV Show/Book/Season
+<li> Inglorious Basterds</li>
+<li> Breaking Bad</li>
+<li> A Song of Ice and Fire series</li>
+<li> Autumn</li>
+</ol>
+<h5 align = "center">Websites and Email</h4>
+<p>
+<a href = "http://www.msu.edu">Where I received my BA</a>
+<br>
+<a href = "http://www.youtube.com">Favorite website</a>
+<br>
+<a href = "mailto:dchabala10@gmail.com">My email</a>
+
+
+</body>
+</html>
