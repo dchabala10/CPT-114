@@ -1,0 +1,48 @@
+<script type="text/javascript">
+<!--
+var rate, yearsLiving, living, humanYears, animalType;
+
+//Assumptions
+
+var insideCatRate = 7
+var outsideCatRate = 8
+var insideDogRate = 6
+var outsideDogRate = 7
+
+//Input
+animalType = prompt("What type of animal? (cat/dog)", " ");
+yearsLiving = prompt("How old is your pet?", " ");
+living = prompt("Where does it live? (inside/outside)", " ");
+
+//Calculations
+if (animalType == "dog")
+{	
+	if (yearsLiving = "inside")
+	{
+		rate = insideDogRate;
+		}
+else
+		{
+		rate = outsideDogRate;
+		}
+		
+	}	
+else
+		{
+	if (living = "inside")
+	{
+		rate = insideCatRate;
+	}	
+	else
+	{
+		rate = outsideCatRate;
+		}
+}
+
+humanYears = yearsLiving * rate
+
+//Output
+document.write("The age of your animal is: " +humanYears);
+
+// -->
+</script>
