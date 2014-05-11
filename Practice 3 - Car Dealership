@@ -1,0 +1,35 @@
+<script type="text/javascript">
+<!--
+var numberOfDays, monTot, tueTot, wedTot, thurTot, friTot;
+var satTot, sunTot, grandTotal, dailyAverage;
+//Assignment
+numberOfDays = 7;
+
+//Input
+monTot = prompt("How many vehicles sold on Monday?");
+tueTot = prompt("How many vehicles sold on Tuesday?");
+wedTot = prompt("How many vehicles sold on Wednesday?");
+thurTot = prompt("How many vehicles sold on Thursday?");
+friTot = prompt("How many vehicles sold on Friday?");
+satTot = prompt("How many vehicles sold on Saturday?");
+sunTot = prompt("How many vehicles sold on Sunday?");
+//convert to numbers
+monTot = parseInt(monTot);
+tueTot = parseInt(tueTot);
+wedTot = parseInt(wedTot);
+thurTot = parseInt(thurTot);
+friTot = parseInt(friTot);
+satTot = parseInt(satTot);
+sunTot = parseInt(sunTot);
+
+//Calculations
+grandTotal = monTot + tueTot + wedTot + thurTot + friTot+ satTot + sunTot;
+dailyAverage = grandTotal/numberOfDays
+
+//Output
+document.write("The weekly total is" + grandTotal);
+
+document.write("The daily average is" + dailyAverage);
+// -->
+
+</script>
