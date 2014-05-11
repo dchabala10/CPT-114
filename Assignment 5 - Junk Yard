@@ -1,0 +1,49 @@
+<script type="text/javascript">
+<!--
+var initialAmount, orderType, onlineDiscount, discountThreshold;
+var largeDiscount, totalDiscountAmount, subtotal, salesTax;
+var salesTaxAmount, grandTotal;
+
+//Assumptions
+var salesTaxAmount = 0.08;
+var onlineOrderDiscount = 0.05;
+var discountThreshold = 1000;
+var thousandOverDiscount = 0.05;
+var onlineOverThousandDiscount = 0.10;
+var onlineDiscount = 0;
+var largeDiscount = 0;
+
+
+//Input
+initialAmount = prompt("How much are you buying?", " ");
+orderType = prompt("Did you order online or offline? (online/offline)", "online");
+
+//Calculations
+if (orderType == "online")
+{
+     onlineDiscount = initialAmount * onlineOrderDiscount;
+    if (initialAmount >= discountThreshold)
+    {
+    largeDiscount = initialAmount * onlineOverThousandDiscount;
+    }
+}
+else if (initialAmount >= discountThreshold)
+    {
+    largeDiscount = thousandOverDiscount;
+    }
+	
+totalDiscountAmount = onlineDiscount + largeDiscount; 	
+subtotal = initialAmount - totalDiscountAmount;
+salesTax = subtotal * salesTaxAmount;
+grandTotal = subtotal + salesTax;
+	
+//Output
+document.write("Your initial amount is: $" +initialAmount);
+document.write("<br>Your online order discount is: $" +onlineDiscount);
+document.write("<br>Your over thousand discount is: $" +largeDiscount);
+document.write("<br>Your total discount amount is: $" +totalDiscountAmount);
+document.write("<br>Your subtotal is: $" +subtotal);
+document.write("<br>Your sales tax is: $" +salesTax);
+document.write("<br>Your grand total is: $" +grandTotal);
+// -->
+</script>
